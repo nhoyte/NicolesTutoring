@@ -1,0 +1,455 @@
+@CHARSET "ISO-8859-1";
+
+
+/*************************** header navigation menu ******************/
+
+h1{
+	font-size: 200%;
+	font-style: italic;
+	color: deeppink;
+}
+
+#shadow{
+	text-shadow: .5px 1.5px magenta;
+    color: deeppink;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fe50b4;
+    border:2px solid darkOrchid;
+}
+
+li {
+    float: left;
+    border-right:3px solid darkOrchid;
+}
+
+li:last-child {
+    border-left: 3px solid darkOrchid;
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: purple;
+}
+
+ul li:active{
+    background-color: darkorchid;
+    color: white;
+}
+
+@media screen and (max-width: 600px){
+    ul li.right, 
+    ul li {float: none;}
+}
+
+
+.floatRight{
+	float: right;
+}
+
+#headerimg{
+	width: 15em;
+	height: 4em;
+}
+
+/*************************index.jsp************************/
+img#slanted{
+	width: 20em;
+	height: 10em;
+	padding-top: 12em;
+	opacity: .7;
+	
+	-ms-transform: rotate(-20deg); 
+    -webkit-transform: rotate(-20deg); 
+    transform: rotate(-20deg);
+}
+
+img#slanted1{
+	width: 20em;
+	height: 10em;
+	padding-top: 1em;
+	opacity: .7;
+	
+	-ms-transform: rotate(-20deg); 
+    -webkit-transform: rotate(-20deg); 
+    transform: rotate(-20deg);
+}
+
+img#slanted2{
+	width: 20em;
+	height: 10em;
+	padding-top: 15em;
+	padding-left: 5em;
+	opacity: .7;
+		
+	-ms-transform: rotate(10deg); 
+    -webkit-transform: rotate(10deg); 
+    transform: rotate(10deg);
+}
+
+img#slantedleft{
+	width: 20em;
+	height: 10em;
+	padding-top: 5em;
+	padding-left: 5em;
+	opacity: .7;
+		
+	-ms-transform: rotate(15deg); 
+    -webkit-transform: rotate(15deg); 
+    transform: rotate(15deg);
+}
+
+#white{
+	background-color: #f4f4f4;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 30%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+ Responsive layout - makes the three columns stack on top of each other instead of next to each other 
+@media screen and (max-width:800px) {
+ .column {
+        width: 100%;
+    }
+}
+
+
+/************************* footer**************************/
+
+.footer{
+	padding-top: 60px;
+    padding-bottom: none;
+    text-align: center;
+    color: #400040;
+    
+}
+
+
+/**********************HTML Elements************************/
+
+body{
+    background-color: plum;
+    color: deeppink;
+    font-size: 100%; 
+    margin: 0;   
+}
+
+div{
+	height:150%;
+	width:100%;
+}
+
+div.center{
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%
+}    
+
+input {
+  display: inline-block;
+  margin-bottom: 3px;
+  margin-left: 4px;
+  padding-top: 2px;
+  border: 2px solid darkOrchid; 
+  -webkit-transition: 1.5s;
+  transition: 0.5s;  
+  height: 20px;
+  width: 200px;
+  
+}
+
+input:focus{	
+	background-color: #ff84c1;
+	color: white;
+}
+
+label{
+	font-size: 110%;
+}
+
+
+h2{
+	padding-top: 10px;
+	font-size: 150%;
+	margin-left: 4px;
+}
+
+h3{
+	
+	font-size: 130%;
+	
+}
+
+p{
+	font-size: 120%;
+	color: darkorchid;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+table, th, td{
+	table-layout: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+	align: center;
+}
+
+#regularTable{
+	border: 2px solid darkOrchid;
+	border-collapse: collapse;
+	padding: 5px;
+	margin-top: 20px;
+}
+
+table{
+	width: 60%;
+}
+
+th,td{
+	height: 40px;
+}
+
+td{
+	width: 30%;
+}
+
+a{
+	color: deeppink;
+	font-size: 120%;
+}
+
+input, select{
+	resize: vertical;
+}
+
+img{
+	height: 18em;
+	width: 20em;
+	opacity: .8;
+}
+
+/**************************login.jsp************************/
+
+.left{	
+	float: left;	
+}
+
+/***********************contact us**************************/
+.column33{
+	float: left;
+    width: 40%;
+    padding-right: 10px;
+}
+
+.column22 {
+    float: left;
+    width: 30%;
+    padding-right: 10px;
+}
+
+.column11 {
+	float: left;
+    width: 30%;
+    padding-left: 2em;
+}
+
+
+#tree{
+	height: 35em;
+	width: 25em;
+	padding-top: none;
+	margin-top: none;
+	opacity: .8;
+}
+
+
+textarea{
+	display: inline-block;
+  	margin-bottom: 3px;
+  	margin-left: 4px;
+  	padding-top: 2px;
+  	border: 2px solid darkOrchid; 
+  	background-color: white;
+  	-webkit-transition: 1.5s;
+  	transition: 0.5s;  
+	height: 100px;
+	width: 200px;
+	text-align: left;
+	word-break: space;	
+}
+
+textarea:focus{	
+	background-color: #ff84c1;
+	color: white;
+}
+
+   
+#center{
+	text-align:center;
+}
+
+#alignTable{
+	border: none;
+	align: center;
+	text-align: right;
+}
+
+/*************************Buttons******************************/
+.button {
+    background-color:#fe50b4;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: bold;
+    display: inline-block;
+    font-size: 14px;
+    border: 2px solid darkOrchid;
+    float: right;
+    height:50px;
+    width: 100px;
+    cursor: pointer;    
+}
+
+.button:hover {
+    background-color: purple;
+    color: white;
+}
+
+
+/***************************subjects.jsp********************/
+input.left{
+	float: left;
+	border: 2px solid darkOrchid;
+	
+}
+
+#subjectsTable{
+	border: none;
+	align: center;
+	text-align: left;
+}
+
+.checkboxes{
+	width: 60px;
+}
+
+img#help{
+	float: right;
+}
+
+.column2 {
+    float: left;
+    width: 45%;
+    padding-right: 10px;
+}
+
+.column1 {
+    float: left;
+    width: 20%;
+    padding-right: 10px;
+}
+
+/****************************availabilities.jsp****************/
+select{
+	
+	width: 90%;
+	padding: 16px 20px;
+	border: 2px solid darkOrchid;
+	background-color: #fd80c1;
+	color: white;
+	font-size: large; 
+}
+
+
+
+/************************************register.jsp*******************************/
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: plum;
+    color: deeppink;
+    position: relative;
+    padding: 20px;
+}
+
+#message p {
+    
+  text-align: left;
+  font-size: small;
+
+    
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: #008000;
+   	
+  text-align: left;
+  font-size: small;
+   	
+}
+
+/* transforms the letter L to represent a checkmark*/
+.valid:before {
+  content: " ";
+  display: inline-block;
+  width: 0.5em; 
+  height: 1em;
+  border: solid green;
+  border-width: 0 0.2em 0.2em 0; 
+  left: 1em;
+  margin-right:1em;
+  top: 40%;
+  margin-top: -0.2em;
+  -webkit-transform: rotate(45deg); 
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  }
+
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+    text-align: left;
+    font-size: small;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "X"; 
+}
+
+.pink{
+	color: deeppink;
+}
