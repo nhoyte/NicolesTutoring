@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Home</title>
+
+</head>
+
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
+
+
+<body id="white">
+
+<div include-html="header.html"></div> 
+
+
+<script>includeHTML();</script>
+
+<!--Homepage lists business info -->
+<h1 id="center"><u>Welcome to Nicole's Tutoring!</u></h1>
+	
+<div class="row">	
+	
+	<div class="column">
+		<img id="slanted1" class="center" src="images/joke.jpg" alt="imaginary friend">
+		<img id="slanted2" class="center" src="images/convert.jpg" alt="no real roots">				
+	</div>
+	
+	<div class="column">
+	
+			<h2 id="center">Hours of Operation:</h2>
+				<p id="center">
+				Monday-Friday: 2:00 pm - 8:00 pm<br>
+				Saturdays: 9:00 am - 5:00 pm<br>
+				Sundays: Closed<br><br>
+				Location: 12345 North Tryon St Charlotte, NC 28262<br>
+				(704) HRT-MATH
+				</p>
+		<h2 id="center">Subjects Offered:</h2>
+		<p id="center">
+			High School Math (9-12) <br>
+			College Algebra <br>
+			Calculus <br>
+			Statistics 
+		</p>
+		&emsp;&emsp;&emsp;
+		<img class="center" src="images/algebro.jpg" alt="algebro"> 
+		
+		</div>
+		
+		<div class="column">
+			<img id="slantedleft" class="center" src="images/mll.jpg" alt="no real roots">
+			<img id="slanted" class="center" src="images/ratreal.png" alt="rational/real">	
+					
+		</div>
+</div>
+	
+</body>
+</html>
