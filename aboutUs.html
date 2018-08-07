@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About Us</title>
+</head>
+
+<body>
+	
+	<div include-html="header.html"></div> 
+
+	
+	
+<script>
+	function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};</script>
+	
+	
+<script>includeHTML();</script>
+	
+	
+	<!--Lists info about the company -->
+	<h2><u>About Us</u></h2>
+
+		<p>
+		
+		Nicole's Tutoring became reality when director, Nicole, realized the need for this type 
+		of help for local students. As more and more families approached Nicole asking 
+		for help with their children's schooling, she saw a need for enrichment programs and supplemental 
+		opportunities to go alongside traditional schooling. Nicole's Tutoring was born out of a desire 
+		to help students of all ability levels who needed this educational enrichment.
+		<br><br>
+		
+		Each student who comes to Nicole's Tutoring begins with a diagnostic test to
+		identify areas where they need more help. This allows us to create a personal learning program to 
+		fill in those gaps. 
+		<br><br>
+		
+		If you are a student who is strugling or have a child who is struggling, Nicole's Tutoring is the answer. 
+		We strive to bridge the gaps in students' understanding and bring any lacking skills to the mastery 
+		level. Our certified teaching staff uses a variety of materials and methods to reach learners of all 
+		types. Don't let school be a struggle any longer. Get the help and enrichment you need today! <br><br>
+		</p>
+			 
+<div include-html="Footer.html"></div> 
+</body>
+	
+</body>
+</html>

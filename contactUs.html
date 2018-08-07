@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact Us</title>
+</head>
+
+<body id="white">
+
+	
+	<div include-html="header.html"></div> 
+
+	
+	
+<script>
+	function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+	
+	
+<script>includeHTML();</script>
+	
+<div class="row">	
+	
+	<div class="column11">
+		<img id="tree" class="center" src="images/images.png" alt="tree">		
+	</div>
+	
+	<div class="column22">
+	
+	<h2 id="center"><u>Contact Us!</u></h2>
+		<p id="center">To schedule an appointment <b><i>call</i></b> Nicole at:<br>
+			<aside id="center"><b>(704) 712-5810</b></aside> <br>
+		</p>
+		<p id="center">
+		<u>OR</u> <br><br>
+			<b><i>Email</i></b> Nicole's Tutoring at: <br>
+		</p>
+	
+		<aside id="center"><b>Nicolestutoring@yahoo.com</b></aside> <br><br>
+		<p id="center">
+			(Please include subject, grade level, current topic being covered, and 
+			desired appointment times in your message!)
+		</p>
+	
+	
+	
+	</div>
+	<div class="column33">
+		<p></p>
+	</div>
+	
+</div>
+	
+<div include-html="Footer.html"></div> 
+	
+</body>
+</html>

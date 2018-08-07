@@ -7,9 +7,14 @@
 
 </head>
 
+<body id="white">
 
+<div include-html="header.html"></div> 
+
+	
+	
 <script>
-function includeHTML() {
+	function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
   z = document.getElementsByTagName("*");
@@ -35,16 +40,9 @@ function includeHTML() {
       return;
     }
   }
-};
-</script>
-
-
-
-<body id="white">
-
-<div include-html="header.html"></div> 
-
-
+};</script>
+	
+	
 <script>includeHTML();</script>
 
 <!--Homepage lists business info -->
@@ -59,20 +57,21 @@ function includeHTML() {
 	
 	<div class="column">
 	
-			<h2 id="center">Hours of Operation:</h2>
+			<h2 id="center">General Hours of Operation:</h2>
 				<p id="center">
 				Monday-Friday: 2:00 pm - 8:00 pm<br>
-				Saturdays: 9:00 am - 5:00 pm<br>
-				Sundays: Closed<br><br>
-				Location: 12345 North Tryon St Charlotte, NC 28262<br>
-				(704) HRT-MATH
+				Saturdays: 9:00 am - 8:00 pm<br>
+				Sundays: Not Available<br><br>
+				All sessions by appointment only!<br>
+				
 				</p>
 		<h2 id="center">Subjects Offered:</h2>
 		<p id="center">
-			High School Math (9-12) <br>
+			Math I (Grade 9) <br>
+			Developmental Math (DMA) <br>
 			College Algebra <br>
-			Calculus <br>
-			Statistics 
+			Pre-Calc <br>
+			Calculus I <br>			 
 		</p>
 		&emsp;&emsp;&emsp;
 		<img class="center" src="images/algebro.jpg" alt="algebro"> 
@@ -86,5 +85,6 @@ function includeHTML() {
 		</div>
 </div>
 	
+<div include-html="Footer.html"></div> 
 </body>
 </html>
